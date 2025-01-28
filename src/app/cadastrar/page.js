@@ -14,10 +14,10 @@ export default function cadastrar() {
                         <label className={styles.label}>Email:</label>
                         <input type="email" id="email" name="email" required />
 
-                        <label className={styles.label} for="celular">Celular:</label>
+                        <label className={styles.label} htmlFor="celular">Celular:</label>
                         <input type="celular" id="celular" name="celular" required />
 
-                        <input type="submit" classname={styles.botao} value="Entrar" />
+                        <input type="submit" className={styles.botao} value="Entrar"/>
                     </form>
 
                     <div className={styles.dVoltar}>

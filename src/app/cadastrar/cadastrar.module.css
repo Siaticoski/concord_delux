@@ -11,7 +11,7 @@
     border-radius: 130px;
     display: flex;
     justify-content: center;
-    margin-top: 40%;
+    margin-top: 20%;
     padding: 4%;
 }  
 .section{
@@ -40,6 +40,7 @@
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    margin-top: 5px;
 }
 
 

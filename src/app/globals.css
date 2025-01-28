@@ -8,3 +8,18 @@ body{
 a{
   text-decoration: none;
 }
+
+p{
+  color: white;
+}
+
+h1{
+  margin: 0;
+  color: white;
+  font-size: 40px;
+  font-family: Arial, sans-serif;
+}
+
+p{
+  margin: 0;
+}
