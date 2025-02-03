@@ -1,7 +1,7 @@
 .quadrado{
     background: linear-gradient(to left, #5EECF5, #024751);
-    width: 600px;
-    height: 600px;
+    width: 900px;
+    height: 900px;
     transform: rotate(-110deg);
     border-radius: 130px;
     display: flex;
@@ -16,6 +16,13 @@
     transform: rotate(110deg);
     display: flex;
     justify-content: center;
+    flex-direction: column;
+}
+.arruma2{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 300px;
 }
 
 .form{
@@ -27,6 +34,7 @@
 .label{
     font-size: 25px;
     text-align: center;
+    margin-top: 10px;
 }
 
 .botao {
@@ -39,8 +47,43 @@
     font-size: 16px;
     margin-top: 5px;
 }
+.botao:hover {
+    background-color: #0056b3;
+}
+
+.ls{
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+}
 
 .a{
     color: white;
     font-size: medium;
+}
+
+.cadastrar{
+    display: flex;
+    justify-content: end;
+    margin-top: 50px;
+    width: auto;
+    height: auto;
+    font-size: 20px;
+}
+.lc{
+    color: cyan;
+    font-size: 20px;
+}
+
+.voltar{
+    display: flex;
+    justify-content: start;
+    width: auto;
+    width: auto;
+    margin-top: 100px;
+    padding-right: 200px;
+}
+.lv{
+    color: white;
+    font-size: 30px;
 }
