@@ -1,0 +1,13 @@
+.comeco{
+    background: grey;
+    width: 700px;
+    height: 800px;
+    display: flex;
+    margin-top: 35px;
+    border-radius: 30px;
+}
+
+.fundo{
+    display: flex;
+    justify-content: center;
+}
