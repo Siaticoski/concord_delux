@@ -1,0 +1,12 @@
+.cor{
+    color: white;
+}
+
+.pesquisa{
+    background-color: gray;
+    color: white;
+    width: 500px;
+    height: 30px;
+    border-radius: 30px;
+    font-size: larger;
+}

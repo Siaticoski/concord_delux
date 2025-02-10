@@ -4,7 +4,7 @@ import Link from "next/link"
 
 export default function bloqueio() {
     return(
-        <selection className={styles.fundo}>
+        <section className={styles.fundo}>
             <section className={styles.comeco}>
 
                 <div className={styles.inicio}>
@@ -29,7 +29,7 @@ export default function bloqueio() {
                 </div>
 
             </section>
-        </selection>
+        </section>
         
     )
 }
