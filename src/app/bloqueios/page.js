@@ -3,32 +3,62 @@ import { useState } from "react";
 import styles from "./bloqueios.module.css";
 
 export default function filtro() {
-    
-    const nums = [1,2,3,4,5,6,7,8,9,10];
-    const pares = nums.filter((num) => (num % 2===0));
-    const nomes = ['Miguel', 'João', 'Caleb', 'Guilherme', 'Gabriel'];
-    const [busca, setBusca] = useState('');
-    const nomesBusca = nomes.filter((nome) => (nome.toLowerCase().includes(busca.toLowerCase())))
+  const [nomes, setNomes] = useState(['Miguel', 'João', 'Caleb', 'Guilherme', 'Gabriel', 'Caio', 'Ana', 'Eduardo']);
+  const [busca, setBusca] = useState('');
+  const [novoNome, setNovoNome] = useState(''); // Estado para o novo nome
 
-    console.log(pares);
-    console.log(nums);
+  const nomesBusca = nomes.filter((nome) =>
+    nome.toLowerCase().includes(busca.toLowerCase())
+  );
 
-    return(
-        <div className={styles.cor}>
+  const adicionarNome = () => {
+    // Adiciona o novo nome à lista
+    setNomes([...nomes, novoNome]);
+    setNovoNome(''); // Limpa o campo de entrada
+  };
 
-            <input className={styles.pesquisa}
-                value={busca}
-                type="text"
-                onChange={(ev) => setBusca(ev.target.value)}
-            />
+  return (
+    <div className={styles.cor}>
+      <div className={styles.centro}>
 
-            <h1>Filtro</h1>
             
-            <ul>
-                {nomesBusca.map((nome, i) =>(
-                    <li key={i}>{nome}</li>
-                ))}
-            </ul>
+
+        <input
+          className={styles.pesquisa}
+          value={busca}
+          type="text"
+          onChange={(ev) => setBusca(ev.target.value)}
+          placeholder="Pesquisar contato bloqueado"
+        />
+
+
+        <div className={styles.arruma3}>
+            
+            {/* Campo de entrada para o novo nome */}
+            <input
+                className={styles.busca}
+                type="text"
+                value={novoNome}
+                onChange={(ev) => setNovoNome(ev.target.value)}
+                placeholder="Digite o novo nome"
+            />
+            {/* Botão para adicionar nome */}
+            <button className={styles.adiciona} onClick={adicionarNome}>Adicionar</button>
+
         </div>
-    );
-};
+
+
+        <ul className={styles.arruma}>
+          {nomesBusca.map((nome, i) => (
+            <li key={i}>
+              <img className={styles.img} src="/images/boneco.png" alt={nome} />
+              {nome}
+            </li>
+          ))}
+        </ul>
+
+            
+      </div>
+    </div>
+  );
+}
