@@ -40,22 +40,24 @@ export default function filtro() {
                 type="text"
                 value={novoNome}
                 onChange={(ev) => setNovoNome(ev.target.value)}
-                placeholder="Digite o novo nome"
+                placeholder="Digite o contato"
             />
             {/* Botão para adicionar nome */}
-            <button className={styles.adiciona} onClick={adicionarNome}>Adicionar</button>
+            <button className={styles.adiciona} onClick={adicionarNome}>Bloquear</button>
 
         </div>
 
-
-        <ul className={styles.arruma}>
-          {nomesBusca.map((nome, i) => (
-            <li key={i}>
-              <img className={styles.img} src="/images/boneco.png" alt={nome} />
-              {nome}
-            </li>
-          ))}
-        </ul>
+        <div className={styles.lista}>
+          <ul className={styles.arruma}>
+            {nomesBusca.map((nome, i) => (
+              <li key={i}>
+                <img className={styles.img} src="/images/boneco.png" alt={nome} />
+                {nome}
+              </li>
+            ))}
+          </ul>
+        </div>
+        
 
             
       </div>
